@@ -26,6 +26,7 @@ The file processes.txt contains lines in the following format:
 <Process ID> <Burst Time (in seconds)>
 
 Example:
+
 1 3  
 2 2  
 3 4  
