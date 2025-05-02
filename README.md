@@ -57,7 +57,7 @@ This log helps visualize thread activity and ensures that locks are being acquir
 
 **Challenges & Solutions: What difficulties were faced?**
 
-One challenge was handling the input parsing from processes.txt. Initial parsing errors resulted in incomplete thread creation. This was fixed by implementing error checking for each line and validating the format. Another challenge was ensuring that threads executed concurrently without blocking each other unnecessarily. To manage this, proper use of synchronization primitives like ReentrantLock and Semaphore was essential.
+One challenge was handling the input parsing from processes.txt. Initial parsing errors resulted in incomplete thread creation. This was fixed by implementing error checking for each line and validating the format. Another challenge was ensuring that threads executed concurrently without blocking each other unnecessarily. To manage this, the proper use of synchronization primitives like ReentrantLock and Semaphore was essential.
 
 Deadlock prevention in the Dining Philosophers problem also posed a challenge. The solution was to enforce a consistent fork-picking order (always pick up the lower-numbered fork first), preventing circular wait.
 
@@ -69,6 +69,6 @@ The code is divided into two main components:
 
 Process Simulation: A class reads the input file and creates a thread for each process. Each thread sleeps for the burst time, simulating execution. Threads log when they start and finish.
 
-Synchronization Problem: Depending on the chosen problem (Dining Philosophers, Readers-Writers, or Producer-Consumer), threads interact with shared resources using locks or semaphores. The synchronization ensures no race conditions or deadlocks occur. Each action (waiting, acquiring, releasing) is logged to the console.
+Synchronization Problem: Depending on the chosen problem (Dining Philosophers, Readers-Writers, or Producer-Consumer), threads interact with shared resources using locks or semaphores. The synchronization ensures that no race conditions or deadlocks occur. Each action (waiting, acquiring, releasing) is logged to the console.
 
 The code is modular, well-commented, and includes sample outputs for verification.
